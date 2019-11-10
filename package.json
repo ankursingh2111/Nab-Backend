@@ -1,0 +1,58 @@
+{
+  "name": "nab-backend",
+  "version": "1.0.0",
+  "description": "Backend API to handle front end request",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --exec node -r esm .",
+    "lint": "eslint --fix --ext=js --ignore-path=.gitignore .",
+    "test": "jest",
+    "ci": "yarn lint && yarn test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ankursingh2111/Nab-Backend.git"
+  },
+  "author": "Ankur Singh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ankursingh2111/Nab-Backend/issues"
+  },
+  "homepage": "https://github.com/ankursingh2111/Nab-Backend#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "esm": "^3.2.25",
+    "express": "^4.17.1",
+    "express-generator": "^4.16.1",
+    "moment": "^2.24.0"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
+    "babel-preset-env": "^1.7.0",
+    "eslint": "^6.2.2",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-prettier": "^3.1.0",
+    "husky": "^3.0.4",
+    "jest": "^24.9.0",
+    "lint-staged": "^9.2.3",
+    "nodemon": "^1.19.1",
+    "prettier": "^1.18.2",
+    "prettier-eslint": "^9.0.0",
+    "pretty-quick": "^1.11.1",
+    "supertest": "^4.0.2"
+  },
+  "lint-staged": {
+    "*.js": [
+      "pretty-quick --staged",
+      "yarn lint",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  }
+}

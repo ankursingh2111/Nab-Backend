@@ -1,0 +1,10 @@
+#!/bin/sh -eu
+
+watch() {
+    yarn nodemon -w src --exec node -r esm .
+}
+
+echo "Watching API"
+APP_NAME=wm-dashboard-api watch &
+
+wait %1
