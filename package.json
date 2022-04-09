@@ -24,7 +24,7 @@
     "esm": "^3.2.25",
     "express": "^4.17.1",
     "express-generator": "^4.16.1",
-    "moment": "^2.24.0"
+    "moment": "^2.29.2"
   },
   "devDependencies": {
     "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
